@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [[ $1 == 'stop' ]]; then
+		echo -e '';
+        screen -S YTBOT -X quit
+		echo -e "[>>] YTBOT zostal wylaczony [<<]"
+elif [[ $1 == 'start' ]]; then
+		echo -e '';
+        screen -dmS YTBOT php core.php
+		echo -e "[>>] YTBOT zostal uruchomiony [<<]"
+else
+	echo -e '';
+	echo -e "[>>] Uzycie: ./run.sh {start/stop} [<<]"
+	echo -e "[>>] start - uruchomienie YTBOT [<<]"
+	echo -e "[>>] stop - wylaczenie YTBOT [<<]"
+	echo -e '';
+ fi
+
+
